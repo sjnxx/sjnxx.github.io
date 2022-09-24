@@ -56,11 +56,15 @@
   <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="C10B5018-B1D8-4B5E-9299-D7FD0053DE9E.mp3"></audio>
 </html>
 <style type="text/css">
-
-     audio{
-
-             display: none;
-
-         }
-
+	function audioAutoPlay(id){
+	var audio = document.getElementById(id);
+	audio.play();
+	document.addEventListener("WeixinJSBridgeReady", function () {
+	audio.play();
+		}, false);
+	document.addEventListener('YixinJSBridgeReady', function() {
+	audio.play();
+		}, false);
+	}
+	audioAutoPlay('xxx');
 </style>
